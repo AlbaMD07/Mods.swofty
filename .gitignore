@@ -1,0 +1,8 @@
+# build output: the DLL ships in the .swoftyaddon attached to each release, not in git
+*/native/build/
+*/native/*.dll
+*/native/*.lib
+*/native/*.pdb
+# Swofty's SDK headers: the build scripts download them, pinned to one commit
+*/native/include/
+*.swoftyaddon

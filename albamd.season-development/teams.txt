@@ -1,0 +1,22 @@
+# Team names for the paddock report: <live team badge key>=<name shown>.
+# A key the list doesn't name shows with a capital first letter. The verbose log prints every car's key.
+mercedes=Mercedes
+ferrari=Ferrari
+redbull=Red Bull
+red_bull=Red Bull
+mclaren=McLaren
+astonmartin=Aston Martin
+aston_martin=Aston Martin
+alpine=Alpine
+williams=Williams
+rb=Racing Bulls
+racingbulls=Racing Bulls
+racing_bulls=Racing Bulls
+tororosso=Racing Bulls
+haas=Haas
+sauber=Sauber
+kick_sauber=Sauber
+audi=Audi
+cadillac=Cadillac
+apxgp=APXGP
+konnersport=Konnersport

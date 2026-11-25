@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "albamd.season-development",
+  "name": "Season Development",
+  "version": "0.1.0",
+  "author": "AlbaMD",
+  "description": "AI teams develop their cars through a career season: upgrade packages that work, half work or fail, big steps in the early and summer upgrade windows, teams that stop to focus on next year, and a paddock report at Team HQ before every round. Your own car is never touched. Offline only.",
+  "license": "MIT",
+  "repository": "https://github.com/AlbaMD07/mods.swofty",
+  "category": "career",
+  "kind": ["native"],
+  "compat": {
+    "game": "f1_25",
+    "game_builds": [">=26566308"],
+    "launcher": ">=1.10.48",
+    "seasons": ["f1_2025", "f1_2026"],
+    "platforms": ["steam"]
+  },
+  "requires": [{ "id": "swofty.core", "version": ">=0.1.0" }],
+  "experimental_features": ["telemetry"],
+  "options": [
+    { "id": "enabled", "type": "toggle", "label": "AI season development", "description": "Apply each AI team's development to its cars in career sessions.", "default": true, "binds": "native" },
+    { "id": "strength", "type": "slider", "label": "Strength", "description": "How much a development step changes the car, in percent of the default.", "min": 0, "max": 200, "step": 10, "default": 100, "binds": "native" },
+    { "id": "frequency", "type": "choice", "label": "Upgrade frequency", "description": "How often teams bring upgrade packages.", "values": [{ "value": "low", "label": "Low" }, { "value": "normal", "label": "Normal" }, { "value": "high", "label": "High" }], "default": "normal", "binds": "native" },
+    { "id": "failures", "type": "choice", "label": "Packages that fail", "description": "How often an upgrade doesn't work and has to be rolled back.", "values": [{ "value": "rare", "label": "Rare" }, { "value": "normal", "label": "Normal" }, { "value": "often", "label": "Often" }], "default": "normal", "binds": "native" },
+    { "id": "include_player_team", "type": "toggle", "label": "Develop your team-mate's car", "description": "Off: your team develops only through the game's own R&D.", "default": false, "binds": "native" },
+    { "id": "reports", "type": "choice", "label": "Paddock report", "description": "The upgrades popup at Team HQ before each round.", "values": [{ "value": "off", "label": "Off" }, { "value": "summary", "label": "Summary" }, { "value": "detailed", "label": "Detailed (with numbers)" }], "default": "summary", "binds": "native" },
+    { "id": "verbose", "type": "toggle", "label": "Verbose log", "description": "Write every car's scales and every news line to swofty/loader.log.", "default": false, "binds": "native", "hidden": true }
+  ],
+  "operations": {
+    "native": [{ "dll": "native/season_development.dll", "files": ["teams.txt"] }]
+  }
+}
